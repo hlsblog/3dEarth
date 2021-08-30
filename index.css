@@ -1,0 +1,66 @@
+body{
+	height: 100%;
+	background-color: #161930;
+    background-image: url(./images/texture_grid.png);
+    background-repeat: repeat;
+}
+.map{
+	width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    position: absolute;
+}
+
+#container {
+	margin: 0 auto;
+	height:100%;
+	box-sizing: border-box;
+}
+
+
+.globe-tips{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 260px;
+	min-height: 190px;
+	background: rgba(20, 98, 122, 0.507);
+    border: 1px solid rgba(25, 186, 139, .17);
+	z-index: 100;
+	display: none;
+}
+.globe-tips-con{
+	padding: 15px;
+}
+
+
+.globe-tips:before,
+.globe-tips:after {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	content: "";
+	border-top: 2px solid #57fecc;
+	top: 0;
+}
+.globe-tips:before{
+	border-left: 2px solid #57fecc;
+	left: 0;
+}
+.globe-tips:after{
+	border-right: 2px solid #57fecc;
+	right: 0;
+}
+
+.globe-tips-con img{
+	display: block;
+	/* height: 1rem; */
+}
+.globe-tips-con p{
+	margin: 0;
+	padding: 15px 0 0 0;
+	color: #6cffd2;
+	line-height: 18px;
+	font-size: 16px;
+	font-weight: 700;
+}
