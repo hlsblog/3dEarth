@@ -11,6 +11,10 @@
 		currentOffsetTop: 0,
 		isMouseOn: false,
 		mouseOnPos: [0, 0],
+		bAutoTooltips: false,	//设置自动悬浮提示层
+		setAutoToolTips: function() {
+			this.bAutoTooltips = true;
+		},
 		setName: function(name){
 			this.name = name
 		},
@@ -24,6 +28,10 @@
 		},
 		start: function(){
 			this.clearTimer()
+			//设置自动提示层，不再受页面提示控制
+			if (this.bAutoTooltips) {
+				return;
+			}
 			if (this.name) {
 				if (!sToolTipsConfig[this.name]) {
 					this.setName('')
@@ -46,6 +54,10 @@
 			}
 			this.clearTimer()
 			this.timer = setTimeout(function(){
+				//设置自动提示层，不再受页面提示控制
+				if (this.bAutoTooltips) {
+					return;
+				}
 				_this.setName('')
 				_this.showTipsRealContent(false)
 				//setAutoRotate(true)

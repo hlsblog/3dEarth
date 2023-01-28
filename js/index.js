@@ -282,7 +282,7 @@
 						areaColor: 'transparent',
 						//areaColor: 'black',	//如果不想国家区域是透明的，设置一个颜色值就行
 						borderColor: emphasisMapBorderColor,
-						borderWidth: '2'
+						borderWidth: '1'
 					},
 					label: {
 						show: true,

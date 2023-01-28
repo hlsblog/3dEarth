@@ -1,10 +1,17 @@
-<link rel="stylesheet" href="index.css" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
-<script src="./js/world.js"></script>
-<script src="./js/config.js"></script>
-<script src="./js/index.js"></script>
-<script src="./js/mytooltips.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>echarts 3d earth</title>
+	<link rel="stylesheet" href="index.css" type="text/css" />
+	<script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+	<script src="./js/world.js"></script>
+	<script src="./js/config.js"></script>
+	<script src="./js/index.js"></script>
+	<script src="./js/mytooltips.js"></script>
+</head>
+<body>
 
 <div class="map"></div>
 <div id="container"></div>
@@ -19,6 +26,15 @@
 window.onload = function(){
 	DrawEarthObj.initEarth();
 	HoverHandler.init();
+
+	//设置自动悬浮提示层（setName的传入值是config配置的tooltips里面的名字）
+	HoverHandler.setAutoToolTips();
+	HoverHandler.setName('茂名')
+	HoverHandler.showTipsRealContent(true)
+
 }
 </script>
 
+
+</body>
+</html>
