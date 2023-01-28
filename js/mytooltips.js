@@ -55,7 +55,7 @@
 			this.clearTimer()
 			this.timer = setTimeout(function(){
 				//设置自动提示层，不再受页面提示控制
-				if (this.bAutoTooltips) {
+				if (_this.bAutoTooltips) {
 					return;
 				}
 				_this.setName('')
